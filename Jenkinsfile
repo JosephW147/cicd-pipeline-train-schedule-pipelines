@@ -6,6 +6,7 @@ pipeline{
         echo 'Build is running'
         sh './gradlew build --no-daemon --stacktrace'
         archiveArtifacts artifacts: 'dist/trainSchedule.zip'
+        sh './gradlew npm_start'
       }
     }
   }
